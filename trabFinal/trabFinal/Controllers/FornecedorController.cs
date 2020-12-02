@@ -17,10 +17,10 @@ namespace trabFinal.Controllers
         public ActionResult Index()
         {
             
-            //if (Session["Nome"] == null)
-            //{
-            //    return RedirectToAction("Index", "Logar");
-            //}
+            if (Session["Nome"] == null)
+            {
+                return RedirectToAction("Index", "Logar");
+            }
             return View(db.fornecedores.ToList());
         }
 
@@ -107,6 +107,12 @@ namespace trabFinal.Controllers
             db.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Abandon();
+            return RedirectToAction("Index", "Logar");
         }
     }
 }
