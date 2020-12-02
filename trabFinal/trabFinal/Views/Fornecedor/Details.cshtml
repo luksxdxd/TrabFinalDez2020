@@ -1,0 +1,42 @@
+﻿@model trabFinal.Models.FornecedorModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes do fornecedor</h2>
+
+<div>
+    <h4>Informações</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cartegoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cartegoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar a lista", "Index")
+</p>

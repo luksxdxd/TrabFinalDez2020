@@ -1,0 +1,48 @@
+﻿@model trabFinal.Models.FornecedorModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Deletar Fornecedor</h2>
+
+
+<div>
+    <h4>Informações</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cartegoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cartegoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Deletar" class="btn btn-default" style="color:white; background-color:#BD5D38" /> |
+            @Html.ActionLink("Voltar a lista", "Index")
+        </div>
+    }
+</div>

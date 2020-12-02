@@ -1,0 +1,42 @@
+﻿@model trabFinal.Models.ProdutoModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes do Produto</h2>
+
+<div>
+    <h4>Informações</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Produto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Produto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FornecedorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FornecedorId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar a lista", "Index")
+</p>
